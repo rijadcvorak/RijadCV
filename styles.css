@@ -1,4 +1,4 @@
-/* VARIJABLE – soft sivo-plava tema */
+/* VARIJABLE */
 :root {
   --bg: #050509;
   --panel: #111118;
@@ -293,12 +293,26 @@ h3 {
   overflow: hidden;
 }
 
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: var(--level);
+  }
+}
+
 .bar span {
   display: block;
   height: 100%;
-  border-radius: inherit;
   background: var(--accent);
+  border-radius: inherit;
+  width: 0;
+  animation: fillBar 1.4s ease forwards;
 }
+
+
 
 /* PROJEKTI */
 
